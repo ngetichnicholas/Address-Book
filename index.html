@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Address book</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Address book</h1>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <h2>Add a contact:</h2>
+          <form id="newContact">
+            <div class="form-group">
+              <label for="new-first-name">First name</label>
+              <input type="text" class="form-control" autocomplete="off" id="firstName" placeholder="Enter your First Name">
+            </div>
+            <div class="form-group">
+              <label for="new-last-name">Last name</label>
+              <input type="text" class="form-control" autocomplete="off" id="lastName" placeholder="Enter your Last Name">
+            </div>
+
+            <div id="new-addresses">
+              <div class="new-address">
+                <div class="form-group">
+                  <label for="new-street">Street</label>
+                  <input type="text" class="form-control" autocomplete="off" placeholder="Enter your street" id="street">
+                </div>
+                <div class="form-group">
+                  <label for="new-city">City</label>
+                  <input type="text" class="form-control" autocomplete="off" placeholder="Enter your city" id="city">
+                </div>
+                <div class="form-group">
+                  <label for="new-county">State</label>
+                  <input type="text" class="form-control" autocomplete="off" placeholder="Enter your state" id="state">
+                </div>
+              </div>
+            </div>
+            <button id="addAddress"  class="btn btn-default">Add Address</button>
+            <button type="submit" class="btn btn-warning">Add a New Contact</button>
+          </form>
+
+          <h2>Contacts:</h2>
+          <ul id="myContacts">
+
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <div id="showContact">
+            <h2></h2>
+            <p>First name: <span class="first-name"></span></p>
+            <p>Last name: <span class="last-name"></span></p>
+            <p>Addresses:</p>
+            <ul id="addresses">
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
