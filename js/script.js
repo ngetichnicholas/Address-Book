@@ -55,16 +55,19 @@ $(document).ready(function() {
     });
 
     $("ul#myContacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
-
     $(".contact").last().click(function() {
       $("#showContact").show();
       $("#showContact h2").text(newContact.fullName());
       $(".first-name").text(newContact.firstName);
       $(".last-name").text(newContact.lastName);
+      $("ul#addresses").text("");
       newContact.addresses.forEach(function(address) {
         $("ul#addresses").append("<li>" + address.fullAddress() + "</li>");
       });
     });
+    let form =document.getElementsByName("address-form")[0];
+    form.reset();
+    return false;
 
   });
 });
